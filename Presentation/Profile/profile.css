@@ -20,82 +20,101 @@ body {
   padding: 0 20px;
   width: 100%;
   overflow: hidden;
+  justify-content: space-between;
 }
 .logo {
+  justify-content: center;
   height: 50px;
-}
-.menu {
-  flex-grow: 1;
   display: flex;
   align-items: center;
+  margin: auto;
 }
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-grow: 1;
+  width: 100%; /* 메뉴 전체를 화면 너비로 확장 */
+  position: relative;
+}
+
+.menu:hover .dropdown-content {
+  display: block;
+}
+
 .menu a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 300;
   font-size: 17px;
   padding: 10px;
-  margin-right: 13px;
+  margin-right: 40px;
   width: 80px; /* 너비를 지정하여 텍스트가 밀리지 않도록 설정 */
   text-align: center;
 }
+
 .menu a:hover,
 .menu a:focus {
   color: #ffffff;
   border-bottom: 3px solid #ffffff;
   font-weight: 600;
 }
-
-.search-container {
-  display: flex;
-  align-items: center;
-}
-.search {
-  background-color: #0d3745;
-  color: #ffffff;
-  padding: 5px 10px 5px 35px; /* 이미지 공간을 위해 왼쪽 패딩 추가 */
-  width: 277px;
-  height: 30px;
-  border: 1px solid #ffffff;
-  margin-right: 100px;
-  text-align: left;
-  outline: none;
-  border-radius: 5px;
-  background-image: url("Search.svg"); /* 검색 아이콘 이미지 추가 */
-  background-repeat: no-repeat;
-  background-position: 10px center; /* 이미지 위치 조정 */
-  background-size: 20px 20px; /* 이미지 크기 조정 */
-}
-.user {
-  position: absolute;
-  right: 0; /* 추가 */
-  border-bottom: 1px solid #ffffff;
-  color: #ffffff;
+/* 드롭다운 메뉴 관련 스타일 */
+.dropdown {
+  position: relative;
   display: inline-block;
-  padding: 7px;
-  font-size: 14px;
-  font-weight: 600;
-  background-color: #0d3745;
-  cursor: pointer;
-  margin-right: 10px;
 }
 
-.profilestar2 {
+.dropdown-content {
+  display: none;
   position: absolute;
-  width: 379.4px;
-  height: 379.4px;
-  left: 1321px;
-  top: 487.94px;
-  transform: translate(-50%, -50%);
+  top: 70px; /* 헤더의 높이에 맞춰 위치 조정 */
+  left: 0;
+  width: 100vw; /* 화면 너비 전체를 차지하도록 설정 */
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
 }
-.profilestar1 {
-  position: absolute;
-  width: 253.35px;
-  height: 253.35px;
-  left: 1291.34px;
-  top: 201px;
-  transform: translate(-50%, -50%);
+
+
+/* 메뉴 항목 스타일 */
+.dropdown-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
+
+.dropdown-content li {
+  padding: 8px 16px;
+}
+
+.dropdown-content li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  background-color: #f1f1f1; /* hover 시 배경색 추가 */
+}
+.dropdown-content li a:hover {
+  background-color: #f1f1f1; /* hover 시 배경색 추가 */
+}
+.dropdown-content {
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Management*/
+.management {
+  font-size: 15px;
+  color: #3F3E39;
+  margin-left: 10px;
+  margin-top: 7px;
+}
+
+
 /*Profile*/
 .profile-wrapper {
   display: flex;
@@ -128,9 +147,6 @@ body {
 }
 .profile-info h2 {
   margin-bottom: 5px;
-}
-.profile-info p {
-  color: #777777;
 }
 .edit-button {
   background-color: #0d3745;
@@ -167,6 +183,8 @@ body {
   background-color: #f9f9f9;
 }
 
+
+/* footer */
 .footer {
   position: fixed;
   bottom: 0;
