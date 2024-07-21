@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-t" />
+    <meta charset="utf-8" />
     <title>Warehouse filling</title>
-    <link
-      rel="stylesheet"
-      href="../../Presentation/Filling/filling.css"
-    />
+    <link rel="stylesheet" href="../../Presentation/Filling/filling.css" />
   </head>
 
   <body>
     <div id="wrap">
       <img src="../../Assets/Main/HeaderLogo.svg" alt="Logo" class="logo" />
       <div id="header">
-          <ul id="gnb" class="">
-              <li>
-                  <a href="#">근태관리</a>
-                  <div class="snb">
-                      <ul>
-                          <li>공장추가</li>
-                          <li>퇴근하기</li>
-                      </ul>
-                  </div>
-              </li>
-  
-              <li>
-                  <a href="#">운영지원</a>
-                  <div class="snb">
-                      <ul>
-                          <li>창고채우기</li>
-                          <li>당근</li>
-                      </ul>
-                  </div>
-              </li>
+        <ul id="gnb" class="">
+          <li>
+            <a href="#">근태관리</a>
+            <div class="snb">
+              <ul>
+                <li><a href="../Main/main.html">공장추가</a></li>
+                <li><a href="../Attendance/attendance.html">퇴근하기</a></li>
+              </ul>
+            </div>
+          </li>
 
-              <li>
-                  <a href="#">공장관리</a>
-                  <div class="snb">
-                      <ul>
-                          <li>공장장관리</li>
-                      </ul>
-                  </div>
-              </li>
+          <li>
+            <a href="#">운영지원</a>
+            <div class="snb">
+              <ul>
+                <li>창고채우기</li>
+                <li><a href="../Secondhand/secondhand.html">당근</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="#">공장관리</a>
+            <div class="snb">
+              <ul>
+                <li>
+                  <a href="../Profile/profile.html" class="goto-profile"
+                    >공장장관리</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
       <div class="search-container">
         <input
@@ -60,9 +62,10 @@
   <div class="warehouse">
     <div class="brand">
         <img src="../../Assets/Main/LABNOSH.svg" alt="brand1" class="brandlogo">
+
         <div class="brandDescription">
-            <h2><a href="https://labnosh.com/" target="_blank">LABNOSH</a></h2>
-            <p>#단백질 #쿠키 #저당음료</p>
+          <h2><a href="https://labnosh.com/" target="_blank">LABNOSH</a></h2>
+          <p>#단백질 #쿠키 #저당음료</p>
         </div>
         <button type="button" class="submit-button" onclick="addPartnership('LABNOSH')">
             제휴 맺기
@@ -70,9 +73,14 @@
     </div>
     <div class="brand">
         <img src="../../Assets/Main/CALOBYE.svg" alt="brand2" class="brandlogo">
+
         <div class="brandDescription">
-            <h2><a href="https://www.calobye.com/best_html.php" target="_blank">CALOBYE</a></h2>
-            <p>#김종국광고 #마그네슘 #단백질쉐이크</p>
+          <h2>
+            <a href="https://www.calobye.com/best_html.php" target="_blank"
+              >CALOBYE</a
+            >
+          </h2>
+          <p>#김종국광고 #마그네슘 #단백질쉐이크</p>
         </div>
         <button type="button" class="submit-button" onclick="addPartnership('CALOBYE')">
             제휴 맺기
@@ -81,18 +89,19 @@
     <div class="brand">
         <img src="../../Assets/Main/BODYX.svg" alt="brand1" class="brandlogo">
         <div class="brandDescription">
-            <h2><a href="https://m.bodyx.co.kr/#" target="_blank">BODYX</a></h2>
-            <p>#운동기구 #카디오 #세일</p>
+          <h2><a href="https://m.bodyx.co.kr/#" target="_blank">BODYX</a></h2>
+          <p>#운동기구 #카디오 #세일</p>
         </div>
         <button type="button" class="submit-button" onclick="addPartnership('BODYX')">
             제휴 맺기
         </button>
+      </div>
     </div>
-  </div>
 
     <div class="footer">
       <div class="weare1ne">
         <img src="../../Assets/Main/Logo.svg" alt="Logo" class="bottom-logo" />
+
         <div class="text">
           <div class="we">WeAre1ne</div>
           <div class="team">Team Calm Down</div>
@@ -113,6 +122,5 @@
     </div>
 
     <script src="../../Presentation/Filling/filling.js"></script>
-
   </body>
 </html>
