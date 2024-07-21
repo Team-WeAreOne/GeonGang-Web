@@ -10,8 +10,8 @@
     />
   </head>
   <body>
-    <img src="../../Assets/Main/WebLogo.svg" alt="Logo" class="logo" />
     <div id="wrap">
+      <img src="../../Assets/Main/HeaderLogo.svg" alt="Logo" class="logo" />
       <div id="header">
         <ul id="gnb" class="">
           <li>
@@ -46,6 +46,14 @@
           </li>
         </ul>
       </div>
+      <div class="search-container">
+        <input
+          type="text"
+          name="Search"
+          class="search"
+          placeholder="Search..."
+        />
+      </div>
     </div>
 
     <div class="hello">
@@ -63,6 +71,7 @@
           </div>
         </div>
         <div class="description">
+          <img src="../../Assets/Main/clock.svg" class="clock">
           <div id="submissionTime"></div>
         </div>
         <button type="button" class="logout-button" onclick="logout()">
