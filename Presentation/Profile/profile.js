@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-/* 공장 재고 관리 코드*/
+/* 공장 재고 관리*/
 document.addEventListener('DOMContentLoaded', function() {
     const factoryName = localStorage.getItem('factoryName');
     const factoryNumber = localStorage.getItem('factoryNumber');
@@ -29,30 +29,16 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('factoryNumber').value = factoryNumber;
     }
 
-    const partnershipsList = document.getElementById('partnershipsList');
-    partnershipsList.innerHTML = partnerships.map(partnership => `
-        <div class="partnership">
-            <p>회사 이름: ${partnership.companyName}</p>
-            <p>제휴 날짜: ${partnership.date}</p>
-        </div>
-    `).join('');
+    function updatePartnershipsList(partnerships) {
+        const partnershipsList = document.getElementById('partnershipsList');
+        partnershipsList.innerHTML = partnerships.map(partnership => `
+            <div class="partnership">
+                <p>회사 이름: ${partnership.companyName}</p>
+                <p>제휴 날짜: ${partnership.date}</p>
+                <p>제휴 시간: ${partnership.time}</p>
+            </div>
+        `).join('');
+    }
+    
 });
 
-
-//mouseover
-        let gnb = document.querySelectorAll("#gnb > li")
-        let gnbElement = document.querySelector("#gnb")
-
-        for (let i = 0; i < gnb.length; i++) {
-            gnb[i].addEventListener("mouseover",() => {
-                gnbElement.classList.add("on")
-            })
-        }
-
-        let headerElement = document.querySelector("#header")
-
-        header.addEventListener("mouseout",(e) =>{
-            if (e.target.id == "gnb" ){
-                gnbElement.classList.remove("on")
-            }
-        })
