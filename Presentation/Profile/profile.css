@@ -1,232 +1,231 @@
 * {
-    margin: 0;
-    padding: 0;
-    border: none;
-    box-sizing: border-box;
-  }
-  body {
-    background-color: #f3f2ed;
-    overflow-x: hidden;
-  }
-  
-  
-  /*header*/
-  .header {
-    background-color: #0d3745;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 0 20px;
-    width: 100%;
-    overflow: hidden;
-  }
-  .logo {
-    height: 50px;
-  }
-  .menu {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-  }
-  .menu a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 300;
-    font-size: 17px;
-    padding: 10px;
-    margin-right: 13px;
-    width: 80px; /* 너비를 지정하여 텍스트가 밀리지 않도록 설정 */
-    text-align: center;
-  }
-  .menu a:hover,
-  .menu a:focus {
-    color: #ffffff;
-    border-bottom: 3px solid #ffffff;
-    font-weight: 600;
-  }
-  
-  .search-container {
-    display: flex;
-    align-items: center;
-  }
-  .search {
-    background-color: #0d3745;
-    color: #ffffff;
-    padding: 5px 10px 5px 35px; /* 이미지 공간을 위해 왼쪽 패딩 추가 */
-    width: 277px;
-    height: 30px;
-    border: 1px solid #ffffff;
-    margin-right: 100px;
-    text-align: left;
-    outline: none;
-    border-radius: 5px;
-    background-image: url("Search.svg"); /* 검색 아이콘 이미지 추가 */
-    background-repeat: no-repeat;
-    background-position: 10px center; /* 이미지 위치 조정 */
-    background-size: 20px 20px; /* 이미지 크기 조정 */
-  }
-  .user {
-    position: absolute;
-    right: 0; /* 추가 */
-    border-bottom: 1px solid #FFFFFF;
-    color: #FFFFFF;
-    display: inline-block;
-    padding: 7px;
-    font-size: 14px;
-    font-weight: 600;
-    background-color: #0D3745;
-    cursor: pointer;
-    margin-right: 10px;
-  }
-  
-  .profilestar2 {
-    position: absolute;
-    width: 379.4px;
-    height: 379.4px;
-    left: 1321px;
-    top: 487.94px;
-    transform: translate(-50%, -50%);
-  }
-  .profilestar1 {
-    position: absolute;
-    width: 253.35px;
-    height: 253.35px;
-    left: 1291.34px;
-    top: 201px;
-    transform: translate(-50%, -50%);
-  }
-  /*Profile*/
-  .profile-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 179px); /* 헤더와 푸터를 제외한 전체 높이 */
-    padding: 20px;
-  }
-  .profile-container {
-    width: 80%;
-    max-width: 800px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-  .profile-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .profile-pic {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 20px;
-  }
-  .profile-info {
-    flex-grow: 1;
-  }
-  .profile-info h2 {
-    margin-bottom: 5px;
-  }
-  .profile-info p {
-    color: #777777;
-  }
-  .edit-button {
-    background-color: #0d3745;
-    color: #ffffff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-  }
-  
-  .profile-details {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .detail-row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  .detail {
-    flex-basis: 48%;
-  }
-  .detail label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  .detail input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
-  
-  .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 109px;
-    background-color: #eae8dc;
-    color: #a3a3a3;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
-  }
-  .weare1ne {
-    display: flex;
-    align-items: center;
-  }
-  .bottom-logo {
-    height: 50px;
-    margin-right: 15px;
-  }
-  .text {
-    display: flex;
-    flex-direction: column;
-  }
-  .we {
-    font-weight: 600;
-    font-size: 25px;
-  }
-  .team {
-    font-weight: 400;
-    font-size: 14px;
-  }
-  .middle-wrapper {
-    text-align: center;
-    width: 100%; /* 가운데 정렬을 위해 추가 */
-  }
-  .middle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  .middle a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: 600;
-    font-size: 18px;
-    margin-right: 10px;
-  }
-  .middle2 {
-    font-size: 12px;
-    text-align: center; /* 가운데 정렬을 위해 추가 */
-  }
-  .sns {
-    display: flex;
-    padding-right: 40px;
-    gap: 10px;
-  }
-  .sns-icon {
-    height: 30px;
-    padding-right: 5px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(50, 20%, 94%);
+  overflow-x: hidden;
+  font-family: "Pretendard", sans-serif;
+}
+
+/*header*/
+.header {
+  background-color: #0d3745;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px;
+  width: 100%;
+  overflow: hidden;
+}
+.logo {
+  height: 50px;
+}
+.menu {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 17px;
+  padding: 10px;
+  margin-right: 13px;
+  width: 80px; /* 너비를 지정하여 텍스트가 밀리지 않도록 설정 */
+  text-align: center;
+}
+.menu a:hover,
+.menu a:focus {
+  color: #ffffff;
+  border-bottom: 3px solid #ffffff;
+  font-weight: 600;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+.search {
+  background-color: #0d3745;
+  color: #ffffff;
+  padding: 5px 10px 5px 35px; /* 이미지 공간을 위해 왼쪽 패딩 추가 */
+  width: 277px;
+  height: 30px;
+  border: 1px solid #ffffff;
+  margin-right: 100px;
+  text-align: left;
+  outline: none;
+  border-radius: 5px;
+  background-image: url("Search.svg"); /* 검색 아이콘 이미지 추가 */
+  background-repeat: no-repeat;
+  background-position: 10px center; /* 이미지 위치 조정 */
+  background-size: 20px 20px; /* 이미지 크기 조정 */
+}
+.user {
+  position: absolute;
+  right: 0; /* 추가 */
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+  display: inline-block;
+  padding: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #0d3745;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.profilestar2 {
+  position: absolute;
+  width: 379.4px;
+  height: 379.4px;
+  left: 1321px;
+  top: 487.94px;
+  transform: translate(-50%, -50%);
+}
+.profilestar1 {
+  position: absolute;
+  width: 253.35px;
+  height: 253.35px;
+  left: 1291.34px;
+  top: 201px;
+  transform: translate(-50%, -50%);
+}
+/*Profile*/
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 179px); /* 헤더와 푸터를 제외한 전체 높이 */
+  padding: 20px;
+}
+.profile-container {
+  width: 80%;
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.profile-info {
+  flex-grow: 1;
+}
+.profile-info h2 {
+  margin-bottom: 5px;
+}
+.profile-info p {
+  color: #777777;
+}
+.edit-button {
+  background-color: #0d3745;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.profile-details {
+  display: flex;
+  flex-wrap: wrap;
+}
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.detail {
+  flex-basis: 48%;
+}
+.detail label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.detail input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 109px;
+  background-color: #eae8dc;
+  color: #a3a3a3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+.weare1ne {
+  display: flex;
+  align-items: center;
+}
+.bottom-logo {
+  height: 50px;
+  margin-right: 15px;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+}
+.we {
+  font-weight: 600;
+  font-size: 25px;
+}
+.team {
+  font-weight: 400;
+  font-size: 14px;
+}
+.middle-wrapper {
+  text-align: center;
+  width: 100%; /* 가운데 정렬을 위해 추가 */
+}
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.middle a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.middle2 {
+  font-size: 12px;
+  text-align: center; /* 가운데 정렬을 위해 추가 */
+}
+.sns {
+  display: flex;
+  padding-right: 40px;
+  gap: 10px;
+}
+.sns-icon {
+  height: 30px;
+  padding-right: 5px;
+}
