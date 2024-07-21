@@ -10,8 +10,8 @@
     />
   </head>
   <body>
-    <img src="../../Assets/Main/WebLogo.svg" alt="Logo" class="logo" />
     <div id="wrap">
+      <img src="../../Assets/Main/HeaderLogo.svg" alt="Logo" class="logo" />
       <div id="header">
         <ul id="gnb" class="">
           <li>
@@ -39,15 +39,27 @@
             <div class="snb">
               <ul>
                 <li>
-                  <a href="../Profile/profile.html">공장장관리</a>
+                  <a href="../Profile/profile.html" class="goto-profile"
+                    >공장장관리</a
+                  >
                 </li>
               </ul>
             </div>
           </li>
         </ul>
       </div>
+      <div class="search-container">
+        <input
+          type="text"
+          name="Search"
+          class="search"
+          placeholder="Search..."
+        />
+      </div>
     </div>
-
+    <div class="display">
+      <h5>공장 관리 > 공장장 관리</h5>
+    </div>
     <div class="profile-wrapper">
       <div class="profile-container">
         <div class="profile-header">
@@ -57,33 +69,59 @@
             class="profile-pic"
           />
           <div class="profile-info">
+            <div id="greeting">
+              <span id="name-highlight" class="highlight"></span>
+              <span> 공장장님</span>
+            </div>
             <h2 id="managerName">공장장님</h2>
           </div>
           <button class="edit-button">수정하기</button>
         </div>
 
         <div class="profile-details">
-          <div class="preview">
-            <div class="previews">
-              <ul id="post-list"></ul>
-            </div>
-          </div>
-
           <div class="detail-row">
             <div class="detail">
               <label for="name">공장명</label>
-              <input type="text" id="factoryName" readonly />
+              <input type="text" id="factoryName" readonly placeholder="" />
             </div>
             <div class="detail">
               <label for="department">공장번호</label>
-              <input type="text" id="factoryNumber" readonly />
+              <input type="text" id="factoryNumber" readonly placeholder="" />
             </div>
           </div>
 
           <div class="detail">
-            <label>공장 재고 관리</label>
-            <div id="partnershipsList"></div>
-            <div id="partnershipsList" class="profile-details"></div>
+            <label>공장 제휴 관리</label>
+            <table class="partnershipsList" id="partnershipsList">
+              <thead>
+                <tr>
+                  <th>번호</th>
+                  <th>업체명</th>
+                  <th>제휴 일시</th>
+                  <th>제휴 해지</th>
+                </tr>
+              </thead>
+              <tbody id="partnershipsList">
+                <tr>
+                  <td>1</td>
+                  <td>기업복지몰</td>
+                  <td>2024-07-21</td>
+                  <td><button class="delete-button">제휴 해지</button></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>BTMS</td>
+                  <td>2024-06-08</td>
+                  <td><button class="delete-button">제휴 해지</button></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>머신머신</td>
+                  <td>2024-06-03</td>
+                  <td><button class="delete-button">제휴 해지</button></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -91,15 +129,7 @@
 
     <div class="footer">
       <div class="weare1ne">
-        <img
-          src="../../Assets/Main/Logo_mono.svg"
-          alt="Logo"
-          class="bottom-logo"
-        />
-        <div ckass="text">
-          <div class="we">WeAre1ne</div>
-          <div class="team">Team Calm Down</div>
-        </div>
+        <img src="../../Assets/Main/Logo.svg" alt="Logo" class="bottom-logo" />
       </div>
       <div class="middle-wrapper">
         <div class="middle2">© 2024 WR1 Company, Inc. All rights reserved</div>
