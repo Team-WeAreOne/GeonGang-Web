@@ -61,43 +61,32 @@
           </div>
           <button class="edit-button">수정하기</button>
         </div>
-    </div>
 
-    <div class="profile-wrapper">
-        <div class="profile-container">
-            <div class="profile-header">
-                <img src="../../Assets/Main/CatLogo.svg" alt="User" class="profile-pic" />
-                <div class="profile-info">
-                    <h2 id="managerName">공장장님</h2>
-                </div>
-                <button class="edit-button">수정하기</button>
+        <div class="profile-details">
+          <div class="preview">
+            <div class="previews">
+              <ul id="post-list"></ul>
             </div>
+          </div>
 
-            <div class="profile-details">
-                <div class="preview">
-                    <div class="previews">
-                        <ul id="post-list"></ul>
-                    </div>
-                </div>
-
-                <div class="detail-row">
-                    <div class="detail">
-                        <label for="name">공장명</label>
-                        <input type="text" id="factoryName" readonly>
-                    </div>
-                    <div class="detail">
-                        <label for="department">공장번호</label>
-                        <input type="text" id="factoryNumber" readonly>
-                    </div>
-                </div>
-
-                <div class="detail">
-                    <label>공장 재고 관리</label>
-                    <div id="partnershipsList"></div>
-                    <div id="partnershipsList" class="profile-details"></div>
-                </div>
+          <div class="detail-row">
+            <div class="detail">
+              <label for="name">공장명</label>
+              <input type="text" id="factoryName" readonly />
             </div>
+            <div class="detail">
+              <label for="department">공장번호</label>
+              <input type="text" id="factoryNumber" readonly />
+            </div>
+          </div>
+
+          <div class="detail">
+            <label>공장 재고 관리</label>
+            <div id="partnershipsList"></div>
+            <div id="partnershipsList" class="profile-details"></div>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="footer">
@@ -127,5 +116,5 @@
     </div>
 
     <script src="../../Presentation/Profile/profile.js"></script>
-</body>
+  </body>
 </html>
