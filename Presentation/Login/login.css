@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  body {
+    border: none;
+    background: linear-gradient(to right, #0D3745 599px, #F3F2ED 599px);
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center; /* 수직 정렬 */
+    width: 100%; /* 전체 너비 */
+    height: 100%; /* 전체 높이 */
+    box-sizing: border-box;
+  }
+  
+  .image {
+    position: absolute; /* 이미지 위치 조정 */
+    left: 0; /* 왼쪽 끝에 위치 */
+    top: 50%;
+    transform: translateY(-50%); /* 수직 가운데 정렬 */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .loginstar1 {
+    max-width: 100%;
+    height: auto;
+  }
+  .loginstar2 {
+    position: absolute;
+    top: 481.94px;
+    left: 426px;
+    transform: translate(-50%, -50%);
+  }
+  .loginstar3 {
+    position: absolute;
+    left: 478.61px;
+    top: 115px;
+    transform: translate(-50%, -50%);
+  }
+  
+  .login {
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 400px; /* 로그인 박스의 최대 너비 설정 */
+    margin: auto; /* 중앙 정렬 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 수평 가운데 정렬 */
+    justify-content: center; /* 수직 가운데 정렬 */
+  }
+  .login a {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #login-form {
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px; /* margin 변경 */
+    display: inline-block;
+    background-color: #eae8dc; /* 배경색 설정 */
+  }
+  
+  #login-form > input {
+    width: 100%;
+    height: 48px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    background-color: #f3f2ed;
+  }
+  #login-form > input::placeholder {
+    color: gray;
+  }
+  #login-form > input:focus {
+    outline: none;
+    border-color: transparent;
+  }
+  #login-form > input[type="submit"] {
+    background-color: #0d3745;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 0.5px;
+  }
+  #login-form > input.kakao {
+    background-color: rgb(254, 232, 0);
+    color: rgb(63, 36, 29);
+    font-size: 15px;
+    margin-top: 6px;
+    margin-right: 2px;
+  }
+  
+  /* 로그인 상태 유지 */
+  .keep_check {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .input_keep {
+    display: none; /* 기본 체크 박스 숨김 */
+  }
+  .keep_text {
+    position: relative;
+    padding-left: 30px; /* 라벨과 원형 버튼 사이 공간 확보 */
+    cursor: pointer;
+  }
+  .keep_text::before {
+    content: "✔";
+    position: absolute; /* 부모 요소를 기준으로 위치를 절대적으로 지정 */
+    top: 50%;
+    left: 9px;
+    transform: translateY(
+      -50%
+    ); /* 요소를 자신의 높이의 절반만큼 위로 이동시켜 정확하게 중앙에 위치시킴 */
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid rgb(216, 216, 216);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+    color: gray;
+    background-position: center;
+    background-repeat: no-repeat; /* 배경 이미지가 반복되지 않도록 설정 */
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  .keep_text::after {
+    content: "✔";
+    position: absolute;
+    top: 50%;
+    left: 9px;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: transparent;
+    transition: color 0.3s;
+  }
+  .input_keep:checked + .keep_text::before {
+    background-color: #0D3745;
+    border-color: #0D3745;
+    color: #fff;
+  }
+  
+  /* IP보안 */
+  .wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  #switch {
+    display: none;
+  }
+  .switch_label {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background: rgb(216, 216, 216);
+    border-radius: 20px;
+    transition: 0.2s;
+  }
+  .switch_label::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+  }
+  /* 체크했을 때 */
+  #switch:checked + .switch_label {
+    background: #0D3745;
+  }
+  
+  #switch:checked + .switch_label::before {
+    left: calc(100% - 18px);
+  }
+  .ip {
+    margin-right: 10px;
+    color: gray;
+    font-size: 13px;
+  }
+  #search {
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* form 아래 위치하도록 변경 */
+    align-items: center;
+    height: 48px;
+  }
+  .word {
+    display: flex;
+    align-items: center;
+    padding-right: 10px; /* 단어와 선 사이의 간격 */
+    padding-left: 10px;
+  }
+  .line {
+    border-right: 1px solid gray;
+    height: 1em; /* 선의 높이를 텍스트와 맞춤 */
+    display: inline-block;
+    vertical-align: middle; /* 텍스트와 수직 정렬 */
+  }
+  span {
+    text-decoration-line: none;
+    text-decoration-color: gray;
+    color: gray;
+    font-size: 13px;
+  }
+  a {
+    color: gray;
+    text-decoration: none;
+  }
+  #lang {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    border: 1px solid rgb(216, 216, 216);
+    padding: 7px;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  #lang option {
+    background-color: #fff;
+  }
+  
