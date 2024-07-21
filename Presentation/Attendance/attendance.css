@@ -34,6 +34,7 @@ li {
 
 a {
   text-decoration: none;
+  color: black;
 }
 #header {
   position: fixed;
@@ -95,8 +96,12 @@ a {
   margin-top: 20px;
 }
 .snb {
-  margin: 0; /* 서브 메뉴 마진 제거 */
+  margin: 0;
   top: calc(100% + 0px);
+}
+
+.goto-profile {
+  text-decoration: none;
 }
 
 .hello {
