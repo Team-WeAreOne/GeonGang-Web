@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>건강공강</title>
-    <link rel="stylesheet" href="attendance.css" />
+    <link rel="stylesheet" href="secondhand.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css"
@@ -39,7 +39,9 @@
             <div class="snb">
               <ul>
                 <li>
-                  <a href="../Profile/profile.html">공장장관리</a>
+                  <a href="../Profile/profile.html" class="goto-profile"
+                    >공장장관리</a
+                  >
                 </li>
               </ul>
             </div>
@@ -48,28 +50,8 @@
       </div>
     </div>
 
-    <div class="hello">
-      <div class="hello-container">
-        <img
-          src="../../Assets/Main/CatLogo.svg"
-          alt="profile-pic"
-          class="hello-pic"
-        />
-        <div class="description">안녕하세요,</div>
-        <div class="description">
-          <div class="greeting-container">
-            <div id="greeting"></div>
-            <div class="master">공장장님</div>
-          </div>
-        </div>
-        <div class="description">
-          <div id="submissionTime"></div>
-        </div>
-        <button type="button" class="logout-button" onclick="logout()">
-          퇴근하기
-        </button>
-      </div>
-    </div>
+    <div class="secondhand-list" id="post-list"></div>
+
     <div class="footer">
       <div class="weare1ne">
         <img
@@ -95,6 +77,34 @@
         <img src="../../Assets/Main/Git.svg" alt="Icon" class="sns-icon" />
       </div>
     </div>
-    <script src="attendance.js"></script>
+    <button class="add-button" onclick="openModal()">+</button>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <h2>물건 내놓기</h2>
+        <form id="write-post-form">
+          <div class="form-group">
+            <input
+              type="text"
+              id="post-title"
+              name="post-title"
+              placeholder="제목"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <textarea
+              id="post-content"
+              name="post-content"
+              placeholder="내용"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-button">작성</button>
+        </form>
+      </div>
+    </div>
+    <script src="secondhand.js"></script>
   </body>
 </html>
