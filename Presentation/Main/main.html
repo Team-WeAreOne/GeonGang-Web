@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-t" />
-    <title>WeAre1ne</title>
+    <meta charset="utf-8" />
+    <title>건강공강</title>
     <link rel="stylesheet" href="main.css" />
     <link
       rel="stylesheet"
@@ -11,46 +11,117 @@
   </head>
   <body>
     <div class="header">
-      <img src="../../Assets/Main/Logo.svg" alt="Logo" class="logo" />
-      <div class="menu">
-        <a href="">Home</a>
-        <a href="">Features</a>
-        <a href="">FAQs</a>
-        <a href="">About</a>
+      <div class="main-logo">
+        <img src="../../Assets/Main/WebLogo.svg" alt="Logo" class="logo" />
       </div>
-      <div class="search-container">
-        <input
-          type="text"
-          name="Search"
-          class="search"
-          placeholder="Search..."
-        />
+    </div>
+    <div class="main-page">
+      <div class="promotion">
+        <h1>건강공강은</h1>
+        공강인 대학생들을 위한<br />헬스장 관리 서비스입니다.
       </div>
-      <button onclick="location.href='login.html'" class="loginButton">
-        Login
-      </button>
-      <input type="button" name="Signup" class="signupButton" value="Sign up" />
+      <div class="tab">
+        <div class="tab-content-container">
+          <div id="newMember" class="tab-content active">
+            <form id="new-member-form">
+              <div class="form-group">
+                <input type="text" id="name" placeholder="이름" />
+              </div>
+              <div class="form-group">
+                <input type="text" id="company" placeholder="업체명" />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="businessNumber"
+                  placeholder="사업자번호"
+                  data-key="idPlaceholder"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="비밀번호"
+                  data-key="passwordPlaceholder"
+                />
+              </div>
+              <div class="form-group keep_check">
+                <input
+                  type="checkbox"
+                  id="keep"
+                  name="nvlong"
+                  class="input_keep"
+                  value="off"
+                />
+                <label for="keep" class="keep_text" data-key="keepText">
+                  입점신청 약관 전체 동의
+                </label>
+              </div>
+              <button
+                type="button"
+                class="submit-button"
+                onclick="saveFormData()"
+              >
+                확인
+              </button>
+            </form>
+          </div>
+          <div id="existingMember" class="tab-content">
+            <form id="existing-member-form" class="centered-form">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="existingBusinessNumber"
+                  placeholder="사업자번호"
+                  data-key="idPlaceholder"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  id="existingPassword"
+                  placeholder="비밀번호"
+                  data-key="passwordPlaceholder"
+                />
+              </div>
+              <button
+                type="button"
+                class="submit-button"
+                onclick="saveFormData()"
+              >
+                확인
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="tab-buttons">
+          <button
+            class="tab-button active"
+            onclick="openTab(event, 'newMember')"
+          >
+            신규공장장
+          </button>
+          <button class="tab-button" onclick="openTab(event, 'existingMember')">
+            이미공장장
+          </button>
+        </div>
+      </div>
     </div>
 
     <div class="footer">
       <div class="weare1ne">
         <img
-          src="../../Assets/Main/Logo_mono.svg"
+          src="../../Assets/Main/WebLogo.svg"
           alt="Logo"
           class="bottom-logo"
         />
-        <div ckass="text">
+        <div class="text">
           <div class="we">WeAre1ne</div>
           <div class="team">Team Calm Down</div>
         </div>
       </div>
       <div class="middle-wrapper">
-        <div class="middle">
-          <a href="">Home</a>
-          <a href="">Features</a>
-          <a href="">FAQs</a>
-          <a href="">About</a>
-        </div>
         <div class="middle2">© 2024 WR1 Company, Inc. All rights reserved</div>
       </div>
       <div class="sns">
@@ -63,5 +134,6 @@
         <img src="../../Assets/Main/Git.svg" alt="Icon" class="sns-icon" />
       </div>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
