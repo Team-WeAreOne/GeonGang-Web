@@ -100,107 +100,48 @@ a {
   top: calc(100% + 0px);
 }
 
-.goto-profile {
-  text-decoration: none;
-}
-
-.hello {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 50px 20px 20px 20px;
-}
-
-.hello-container {
-  width: 50%;
-  border: 1px solid grey;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 500px;
-}
-
-.hello-pic {
-  height: 200px;
-  margin-bottom: 50px;
-}
-.description {
-  margin-bottom: 30px;
-  font-weight: 100;
-}
-.greeting-container {
-  display: flex;
-  align-items: center;
-}
-
-#greeting {
-  margin-right: 5px;
-}
-.logout-button {
-  width: 30%;
-  padding: 10px;
-  background-color: #0d3745;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-.logout-button:hover {
-  background-color: #092837;
-}
 .footer {
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 60px;
-  background-color: #f9f8f4;
+  background-color: #eae8dc;
   color: #a3a3a3;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 15px;
 }
-
 .weare1ne {
   display: flex;
   align-items: center;
 }
-
 .bottom-logo {
   height: 50px;
   margin-right: 15px;
 }
-
 .text {
   display: flex;
   flex-direction: column;
 }
-
 .we {
   font-weight: 600;
   font-size: 25px;
 }
-
 .team {
   font-weight: 400;
   font-size: 14px;
 }
-
 .middle-wrapper {
   text-align: center;
-  width: 100%;
+  width: 100%; /* 가운데 정렬을 위해 추가 */
 }
-
 .middle {
   display: flex;
   justify-content: center;
-  width: 100%;
   align-items: center;
+  width: 100%;
 }
-
 .middle a {
   text-decoration: none;
   color: inherit;
@@ -208,19 +149,125 @@ a {
   font-size: 18px;
   margin-right: 10px;
 }
-
 .middle2 {
   font-size: 12px;
-  text-align: center;
+  text-align: center; /* 가운데 정렬을 위해 추가 */
 }
-
 .sns {
   display: flex;
   padding-right: 40px;
   gap: 10px;
 }
-
 .sns-icon {
   height: 30px;
   padding-right: 5px;
+}
+
+.add-button {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #0d3745;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.add-button:hover {
+  background-color: #092837;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  height: auto; /* 높이를 자동으로 설정하여 폼 내용에 맞게 조절 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+#write-post-form {
+  width: 80%;
+}
+
+.close-button {
+  color: #aaa;
+  align-self: flex-end; /* 닫기 버튼을 오른쪽 상단에 위치시킵니다. */
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.post-content {
+  width: 70%;
+}
+
+.post {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0d3745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: auto; /* 제출 버튼을 div 아래쪽에 위치시킵니다. */
+}
+
+.submit-button:hover {
+  background-color: #092837;
+}
+
+.form-group {
+  width: 100%; /* 입력 칸을 div의 가로 폭에 맞춥니다. */
+  margin-bottom: 15px; /* 입력 칸 사이에 간격을 둡니다. */
+}
+#post-title,
+#post-content {
+  width: 100%; /* 입력 칸을 div의 가로 폭에 맞춥니다. */
+  padding: 10px; /* 입력 칸에 패딩을 추가합니다. */
+  border: 1px solid #ddd; /* 입력 칸의 테두리를 설정합니다. */
+  border-radius: 5px; /* 입력 칸의 모서리를 둥글게 만듭니다. */
 }

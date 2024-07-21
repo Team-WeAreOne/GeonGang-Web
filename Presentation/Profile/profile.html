@@ -1,43 +1,65 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>WeAre1ne</title>
     <link rel="stylesheet" href="../../Presentation/Profile/profile.css" />
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css"
+    />
+  </head>
+  <body>
     <img src="../../Assets/Main/WebLogo.svg" alt="Logo" class="logo" />
     <div id="wrap">
-        <div id="header">
-            <ul id="gnb" class="">
-                <li>
-                    <a href="#">근태관리</a>
-                    <div class="snb">
-                        <ul>
-                            <li>공장추가</li>
-                            <li>퇴근하기</li>
-                        </ul>
-                    </div>
-                </li>
+      <div id="header">
+        <ul id="gnb" class="">
+          <li>
+            <a href="#">근태관리</a>
+            <div class="snb">
+              <ul>
+                <li><a href="../Main/main.html">공장추가</a></li>
+                <li><a href="../Attendance/attendance.html">퇴근하기</a></li>
+              </ul>
+            </div>
+          </li>
 
-                <li>
-                    <a href="#">운영지원</a>
-                    <div class="snb">
-                        <ul>
-                            <li>창고채우기</li>
-                            <li>당근</li>
-                        </ul>
-                    </div>
-                </li>
+          <li>
+            <a href="#">운영지원</a>
+            <div class="snb">
+              <ul>
+                <li>창고채우기</li>
+                <li><a href="../Secondhand/secondhand.html">당근</a></li>
+              </ul>
+            </div>
+          </li>
 
+          <li>
+            <a href="#">공장관리</a>
+            <div class="snb">
+              <ul>
                 <li>
-                    <a href="#">공장관리</a>
-                    <div class="snb">
-                        <ul>
-                            <li>공장장관리</li>
-                        </ul>
-                    </div>
+                  <a href="../Profile/profile.html">공장장관리</a>
                 </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="profile-wrapper">
+      <div class="profile-container">
+        <div class="profile-header">
+          <img
+            src="../../Assets/Main/CatLogo.svg"
+            alt="User"
+            class="profile-pic"
+          />
+          <div class="profile-info">
+            <h2 id="managerName">공장장님</h2>
+          </div>
+          <button class="edit-button">수정하기</button>
         </div>
     </div>
 
@@ -78,29 +100,30 @@
         </div>
     </div>
 
-
     <div class="footer">
-        <div class="weare1ne">
-            <img src="../../Assets/Main/Logo_mono.svg" alt="Logo" class="bottom-logo" />
-            <div class="text">
-                <div class="we">WeAre1ne</div>
-                <div class="team">Team Calm Down</div>
-            </div>
+      <div class="weare1ne">
+        <img
+          src="../../Assets/Main/Logo_mono.svg"
+          alt="Logo"
+          class="bottom-logo"
+        />
+        <div ckass="text">
+          <div class="we">WeAre1ne</div>
+          <div class="team">Team Calm Down</div>
         </div>
-        <div class="middle-wrapper">
-            <div class="middle">
-                <a href="">Home</a>
-                <a href="">Features</a>
-                <a href="">FAQs</a>
-                <a href="">About</a>
-            </div>
-            <div class="middle2">© 2024 WR1 Company, Inc. All rights reserved</div>
-        </div>
-        <div class="sns">
-            <img src="../../Assets/Main/X.svg" alt="Icon" class="sns-icon" />
-            <img src="../../Assets/Main/Instagram.svg" alt="Icon" class="sns-icon" />
-            <img src="../../Assets/Main/Git.svg" alt="Icon" class="sns-icon" />
-        </div>
+      </div>
+      <div class="middle-wrapper">
+        <div class="middle2">© 2024 WR1 Company, Inc. All rights reserved</div>
+      </div>
+      <div class="sns">
+        <img src="../../Assets/Main/X.svg" alt="Icon" class="sns-icon" />
+        <img
+          src="../../Assets/Main/Instagram.svg"
+          alt="Icon"
+          class="sns-icon"
+        />
+        <img src="../../Assets/Main/Git.svg" alt="Icon" class="sns-icon" />
+      </div>
     </div>
 
     <script src="../../Presentation/Profile/profile.js"></script>
