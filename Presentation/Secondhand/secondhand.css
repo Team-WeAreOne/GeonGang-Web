@@ -5,12 +5,9 @@
   box-sizing: border-box;
 }
 body {
-  background-color: hsl(50, 20%, 94%);
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   font-family: "Pretendard", sans-serif;
 }
-
-/*mouseover*/
 #wrap {
   background-color: #0d3745;
   height: 70px;
@@ -99,86 +96,10 @@ a {
   margin-top: 20px;
 }
 .snb {
-  margin: 0; /* 서브 메뉴 마진 제거 */
+  margin: 0;
   top: calc(100% + 0px);
 }
 
-/* Management*/
-.management {
-  font-size: 15px;
-  color: #3f3e39;
-  margin-left: 10px;
-  margin-top: 7px;
-}
-
-/*Profile*/
-.profile-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 179px); /* 헤더와 푸터를 제외한 전체 높이 */
-  padding: 20px;
-}
-.profile-container {
-  width: 80%;
-  max-width: 800px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-.profile-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.profile-pic {
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
-}
-.profile-info {
-  flex-grow: 1;
-}
-.profile-info h2 {
-  margin-bottom: 5px;
-}
-.edit-button {
-  background-color: #0d3745;
-  color: #ffffff;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
-}
-
-.profile-details {
-  display: flex;
-  flex-wrap: wrap;
-}
-.detail-row {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 10px;
-}
-.detail {
-  flex-basis: 48%;
-}
-.detail label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-.detail input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-/* footer */
 .footer {
   position: fixed;
   bottom: 0;
@@ -240,4 +161,113 @@ a {
 .sns-icon {
   height: 30px;
   padding-right: 5px;
+}
+
+.add-button {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #0d3745;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.add-button:hover {
+  background-color: #092837;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  height: auto; /* 높이를 자동으로 설정하여 폼 내용에 맞게 조절 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+#write-post-form {
+  width: 80%;
+}
+
+.close-button {
+  color: #aaa;
+  align-self: flex-end; /* 닫기 버튼을 오른쪽 상단에 위치시킵니다. */
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.post-content {
+  width: 70%;
+}
+
+.post {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0d3745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: auto; /* 제출 버튼을 div 아래쪽에 위치시킵니다. */
+}
+
+.submit-button:hover {
+  background-color: #092837;
+}
+
+.form-group {
+  width: 100%; /* 입력 칸을 div의 가로 폭에 맞춥니다. */
+  margin-bottom: 15px; /* 입력 칸 사이에 간격을 둡니다. */
+}
+#post-title,
+#post-content {
+  width: 100%; /* 입력 칸을 div의 가로 폭에 맞춥니다. */
+  padding: 10px; /* 입력 칸에 패딩을 추가합니다. */
+  border: 1px solid #ddd; /* 입력 칸의 테두리를 설정합니다. */
+  border-radius: 5px; /* 입력 칸의 모서리를 둥글게 만듭니다. */
 }
