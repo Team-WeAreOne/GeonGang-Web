@@ -23,7 +23,7 @@
       <div class="tab">
         <div class="tab-content-container">
           <div id="newMember" class="tab-content active">
-            <form id="new-member-form">
+            <form id="new-member-form" onsubmit="saveFormData(); return false;">
               <div class="form-group">
                 <input type="text" id="name" placeholder="이름" />
               </div>
@@ -58,17 +58,15 @@
                   입점신청 약관 전체 동의
                 </label>
               </div>
-              <button
-                type="button"
-                class="submit-button"
-                onclick="saveFormData()"
-              >
-                확인
-              </button>
+              <button type="submit" class="submit-button">확인</button>
             </form>
           </div>
           <div id="existingMember" class="tab-content">
-            <form id="existing-member-form" class="centered-form">
+            <form
+              id="existing-member-form"
+              class="centered-form"
+              onsubmit="return false;"
+            >
               <div class="form-group">
                 <input
                   type="text"
@@ -86,7 +84,7 @@
                 />
               </div>
               <button
-                type="button"
+                type="submit"
                 class="submit-button"
                 onclick="saveFormData()"
               >
@@ -112,7 +110,7 @@
     <div class="footer">
       <div class="weare1ne">
         <img
-          src="../../Assets/Main/WebLogo.svg"
+          src="../../Assets/Main/Logo_mono.svg"
           alt="Logo"
           class="bottom-logo"
         />

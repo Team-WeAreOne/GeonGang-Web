@@ -9,9 +9,12 @@ function saveFormData() {
   localStorage.setItem("businessNumber", businessNumber);
   localStorage.setItem("password", password);
 
+  const currentTime = new Date().toISOString();
+  localStorage.setItem("submissionTime", currentTime);
+
   alert("공장장으로 임명되었습니다!");
 
-  window.location.href = "attendance.html";
+  window.location.href = "../Attendance/attendance.html";
 }
 
 function openTab(event, tabName) {
@@ -29,3 +32,13 @@ function openTab(event, tabName) {
   document.getElementById(tabName).classList.add("active");
   event.currentTarget.className += " active";
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const existingMemberForm = document.getElementById("existing-member-form");
+  existingMemberForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const currentTime = new Date().toISOString();
+    localStorage.setItem("submissionTime", currentTime);
+    window.location.href = "../Attendance/attendance.html";
+  });
+});

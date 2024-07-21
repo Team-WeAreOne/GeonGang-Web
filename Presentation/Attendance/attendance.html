@@ -1,1 +1,93 @@
-<!-- attendacne -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>건강공강</title>
+    <link rel="stylesheet" href="attendance.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css"
+    />
+  </head>
+  <body>
+    <img src="../../Assets/Main/WebLogo.svg" alt="Logo" class="logo" />
+    <div class="header">
+      <div class="menu">
+        <div class="dropdown">
+          <a href="">근태관리</a>
+          <div class="dropdown-content">
+            <ul>
+              <li><a href="">공장추가</a></li>
+              <li><a href="">퇴근하기가</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="">운영지원</a>
+          <div class="dropdown-content">
+            <ul>
+              <li><a href="">창고채우기</a></li>
+              <li><a href="">당근</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="">공장관리</a>
+          <div class="dropdown-content">
+            <ul>
+              <li><a href="">공장장관리 </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hello">
+      <div class="hello-container">
+        <img
+          src="../../Assets/Main/CatLogo.svg"
+          alt="profile-pic"
+          class="hello-pic"
+        />
+        <div class="description">안녕하세요,</div>
+        <div class="description">
+          <div class="greeting-container">
+            <div id="greeting"></div>
+            <div class="master">공장장님</div>
+          </div>
+        </div>
+        <div class="description">
+          <div id="submissionTime"></div>
+        </div>
+        <button type="button" class="logout-button" onclick="logout()">
+          퇴근하기
+        </button>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="weare1ne">
+        <img
+          src="../../Assets/Main/Logo_mono.svg"
+          alt="Logo"
+          class="bottom-logo"
+        />
+        <div class="text">
+          <div class="we">WeAre1ne</div>
+          <div class="team">Team Calm Down</div>
+        </div>
+      </div>
+      <div class="middle-wrapper">
+        <div class="middle2">© 2024 WR1 Company, Inc. All rights reserved</div>
+      </div>
+      <div class="sns">
+        <img src="../../Assets/Main/X.svg" alt="Icon" class="sns-icon" />
+        <img
+          src="../../Assets/Main/Instagram.svg"
+          alt="Icon"
+          class="sns-icon"
+        />
+        <img src="../../Assets/Main/Git.svg" alt="Icon" class="sns-icon" />
+      </div>
+    </div>
+    <script src="attendance.js"></script>
+  </body>
+</html>
