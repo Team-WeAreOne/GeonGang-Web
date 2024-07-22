@@ -9,7 +9,7 @@ for (let i = 0; i < gnb.length; i++) {
 
 let headerElement = document.querySelector("#header");
 
-headerElement.addEventListener("mouseout", (e) => {
+header.addEventListener("mouseout", (e) => {
   if (e.target.id == "gnb") {
     gnbElement.classList.remove("on");
   }

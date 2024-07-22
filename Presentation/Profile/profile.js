@@ -23,19 +23,19 @@ document.addEventListener("DOMContentLoaded", function () {
         <tr>
           <td>1</td>
           <td>기업복지몰</td>
-          <td>2024-07-21</td>
+          <td>2024-07-22</td>
           <td><button class="delete-button" onclick="removePartnership(0)">제휴 해지</button></td>
         </tr>
         <tr>
           <td>2</td>
           <td>BTMS</td>
-          <td>2024-06-08</td>
+          <td>2024-07-22</td>
           <td><button class="delete-button" onclick="removePartnership(1)">제휴 해지</button></td>
         </tr>
         <tr>
           <td>3</td>
           <td>머신머신</td>
-          <td>2024-06-03</td>
+          <td>2024-07-22</td>
           <td><button class="delete-button" onclick="removePartnership(2)">제휴 해지</button></td>
         </tr>`;
   }
@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
     updatePartnershipsList(partnerships);
   };
 
-  // GNB 메뉴의 mouseover 및 mouseout 이벤트 리스너
   let gnb = document.querySelectorAll("#gnb > li");
   let gnbElement = document.querySelector("#gnb");
 
@@ -58,8 +57,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  document.querySelector("#header").addEventListener("mouseout", (e) => {
-    if (!gnbElement.contains(e.relatedTarget)) {
+  let headerElement = document.querySelector("#header");
+
+  header.addEventListener("mouseout", (e) => {
+    if (e.target.id == "gnb") {
       gnbElement.classList.remove("on");
     }
   });
