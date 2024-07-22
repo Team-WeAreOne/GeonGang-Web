@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
   updatePartnershipsList(partnerships);
 });
 
-// GNB 메뉴의 mouseover 및 mouseout 이벤트 리스너
 let gnb = document.querySelectorAll("#gnb > li");
 let gnbElement = document.querySelector("#gnb");
 
@@ -59,8 +58,10 @@ for (let i = 0; i < gnb.length; i++) {
   });
 }
 
-document.querySelector("#header").addEventListener("mouseout", (e) => {
-  if (!gnbElement.contains(e.relatedTarget)) {
+let headerElement = document.querySelector("#header");
+
+header.addEventListener("mouseout", (e) => {
+  if (e.target.id == "gnb") {
     gnbElement.classList.remove("on");
   }
 });
